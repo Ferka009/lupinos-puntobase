@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+:root {
+
+  /* Identidad Lupinos */
+
+  --crema: #F8F1E5;
+  --oliva: #5C6B3C;
+  --bordo: #7A263A;
+  --dorado: #C49A4A;
+  --madera: #4A3828;
+
+}
+
+
+body {
+
+  background: var(--crema);
+  color: var(--madera);
+
+}
+html {
+  scroll-behavior: smooth;
+}
+html{
+  scroll-behavior:smooth;
+}
