@@ -15,9 +15,48 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Lupinos | Pastas Artesanales",
-  description: "Pastas artesanales elaboradas con dedicación.",
+  title: "Lupinos | Pastas Artesanales en Luján",
+
+  description:
+    "Pastas artesanales elaboradas en Luján, Buenos Aires. Raviolones, sorrentinos, pastas frescas y especialidades gourmet hechas con ingredientes seleccionados.",
+
+  keywords: [
+    "pastas artesanales",
+    "pastas frescas",
+    "raviolones",
+    "sorrentinos",
+    "Luján",
+    "Buenos Aires",
+    "comida artesanal",
+  ],
+
+  authors: [
+    {
+      name: "Lupinos Pastas Artesanales",
+    },
+  ],
+
+  openGraph: {
+    title: "Lupinos | Pastas Artesanales",
+
+    description:
+      "Sabores artesanales inspirados en la naturaleza y elaborados desde Luján, Buenos Aires.",
+
+    type: "website",
+
+    locale: "es_AR",
+
+    siteName: "Lupinos",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Lupinos | Pastas Artesanales",
+    description:
+      "Pastas artesanales elaboradas con dedicación, ingredientes seleccionados y recetas únicas.",
+  },
 };
+
 
 export default function RootLayout({
   children,
@@ -29,7 +68,15 @@ export default function RootLayout({
       lang="es"
       className={`${cormorant.variable} ${poppins.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-[var(--font-poppins)]">
+      <body
+        className="
+          min-h-full
+          flex
+          flex-col
+          font-[var(--font-poppins)]
+          bg-[#f7f2e8]
+        "
+      >
         {children}
       </body>
     </html>

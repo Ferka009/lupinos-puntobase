@@ -22,7 +22,7 @@ export const specialtiesData = [
   },
 
   {
-    title: "Raviolones de Trucha",
+    title: "Sorrentinos de Trucha",
 
     badge: "Próximamente",
 

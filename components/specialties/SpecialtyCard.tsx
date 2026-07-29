@@ -12,7 +12,7 @@ type SpecialtyCardProps = {
 
 export default function SpecialtyCard({
   title,
- badge,
+  badge,
   subtitle,
   description,
   image,
@@ -23,12 +23,15 @@ export default function SpecialtyCard({
     <section
       className={`
         mx-auto
-        flex
         max-w-7xl
-        items-center
-        gap-16
-        py-24
+        px-6
+        py-16
+        md:py-24
+        flex
         flex-col
+        items-center
+        gap-10
+        lg:gap-16
         lg:flex-row
         ${reverse ? "lg:flex-row-reverse" : ""}
       `}
@@ -36,7 +39,7 @@ export default function SpecialtyCard({
       {/* Imagen */}
 
       <div className="w-full lg:w-3/5">
-        <div className="overflow-hidden rounded-[32px] shadow-2xl group">
+        <div className="group overflow-hidden rounded-[24px] md:rounded-[32px] shadow-2xl">
 
           <Image
             src={image}
@@ -44,7 +47,10 @@ export default function SpecialtyCard({
             width={1400}
             height={900}
             className="
-              h-[550px]
+              h-[260px]
+              sm:h-[360px]
+              md:h-[460px]
+              lg:h-[550px]
               w-full
               object-cover
               transition-transform
@@ -60,20 +66,26 @@ export default function SpecialtyCard({
 
       <div className="relative w-full lg:w-2/5">
 
-        {/* Lupino de fondo */}
+        {/* Lupino */}
 
         <div
           className="
-            absolute
-            -top-10
-            -right-10
-            text-[180px]
-            opacity-[0.04]
             pointer-events-none
+            absolute
+            -top-6
+            right-0
+            text-[90px]
+            sm:text-[120px]
+            lg:-top-10
+            lg:-right-10
+            lg:text-[180px]
+            opacity-[0.04]
           "
         >
           🌿
         </div>
+
+        {/* Badge */}
 
         <span
           className={`
@@ -81,8 +93,9 @@ export default function SpecialtyCard({
             rounded-full
             px-4
             py-2
-            text-sm
-            tracking-widest
+            text-xs
+            sm:text-sm
+            tracking-[0.20em]
             uppercase
 
             ${
@@ -95,11 +108,15 @@ export default function SpecialtyCard({
           {badge}
         </span>
 
+        {/* Título */}
+
         <h2
           className="
-            mt-8
+            mt-6
             font-[var(--font-cormorant)]
-            text-5xl
+            text-3xl
+            sm:text-4xl
+            md:text-5xl
             leading-tight
             text-[#2E2E2E]
           "
@@ -107,15 +124,38 @@ export default function SpecialtyCard({
           {title}
         </h2>
 
-        <p className="mt-6 text-xl italic text-[#7A263A]">
+        {/* Subtítulo */}
+
+        <p
+          className="
+            mt-5
+            text-lg
+            md:text-xl
+            italic
+            leading-relaxed
+            text-[#7A263A]
+          "
+        >
           {subtitle}
         </p>
 
-        <p className="mt-8 leading-8 text-gray-600">
+        {/* Descripción */}
+
+        <p
+          className="
+            mt-6
+            text-base
+            md:text-lg
+            leading-8
+            text-gray-600
+          "
+        >
           {description}
         </p>
 
-        <div className="mt-10 flex flex-wrap gap-3">
+        {/* Tags */}
+
+        <div className="mt-8 flex flex-wrap gap-2 sm:gap-3">
           {tags.map((tag) => (
             <span
               key={tag}
@@ -123,17 +163,20 @@ export default function SpecialtyCard({
                 rounded-full
                 border
                 border-[#D8C8A8]
-                px-4
-                py-2
-                text-sm
-                text-[#3d4a35]
                 bg-[#faf7f2]
+                px-3
+                py-2
+                text-xs
+                sm:px-4
+                sm:text-sm
+                text-[#3d4a35]
               "
             >
               {tag}
             </span>
           ))}
         </div>
+
       </div>
     </section>
   );

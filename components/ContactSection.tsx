@@ -5,85 +5,119 @@ export default function ContactSection() {
       className="
         bg-[#2A1D1B]
         text-[#F8F1E7]
-        py-28
         px-6
+        py-16
+        md:py-28
       "
     >
-      <div className="max-w-5xl mx-auto text-center">
+      <div className="mx-auto max-w-5xl text-center">
 
         <p
           className="
+            text-xs
+            sm:text-sm
             uppercase
-            tracking-[0.55em]
-            text-sm
+            tracking-[0.45em]
             text-[#D8C8A8]
           "
         >
           Lupinos
         </p>
 
+
         <h2
           className="
             mt-4
-            text-6xl
             font-[var(--font-cormorant)]
+            text-4xl
+            sm:text-5xl
+            md:text-6xl
           "
         >
           Contacto
         </h2>
 
-        <div className="mx-auto mt-8 w-24 h-px bg-[#D8C8A8]"></div>
+
+        <div
+          className="
+            mx-auto
+            mt-6
+            h-px
+            w-20
+            md:w-24
+            bg-[#D8C8A8]
+          "
+        />
+
 
         <p
           className="
-            mt-8
-            max-w-2xl
             mx-auto
-            text-lg
+            mt-6
+            max-w-2xl
+            text-base
+            sm:text-lg
+            leading-7
+            sm:leading-8
             text-[#E8DFD2]
-            leading-8
           "
         >
           Elaboramos cada pasta de manera artesanal para que disfrutes una
           experiencia auténtica desde el primer bocado.
         </p>
 
-        <div className="grid md:grid-cols-4 gap-8 mt-20">
+
+
+        <div
+          className="
+            mt-12
+            grid
+            gap-5
+            sm:grid-cols-2
+            md:grid-cols-4
+            md:gap-8
+            md:mt-20
+          "
+        >
 
           {/* Ubicación */}
 
-          <div className="rounded-3xl bg-white/5 p-8 border border-white/10">
+          <div className="rounded-3xl bg-white/5 p-6 md:p-8 border border-white/10">
             <div className="text-4xl">📍</div>
 
-            <h3 className="mt-5 text-2xl font-[var(--font-cormorant)]">
+            <h3 className="mt-4 text-xl md:text-2xl font-[var(--font-cormorant)]">
               Ubicación
             </h3>
 
-            <p className="mt-3 text-[#E8DFD2]">
+            <p className="mt-3 text-sm md:text-base text-[#E8DFD2]">
               Luján, Buenos Aires
             </p>
           </div>
 
+
+
           {/* WhatsApp */}
 
-          <div className="rounded-3xl bg-white/5 p-8 border border-white/10">
+          <div className="rounded-3xl bg-white/5 p-6 md:p-8 border border-white/10">
             <div className="text-4xl">📱</div>
 
-            <h3 className="mt-5 text-2xl font-[var(--font-cormorant)]">
+            <h3 className="mt-4 text-xl md:text-2xl font-[var(--font-cormorant)]">
               WhatsApp
             </h3>
 
-            <p className="mt-3 text-[#E8DFD2]">
+            <p className="mt-3 text-sm md:text-base text-[#E8DFD2]">
               +54 9 2323 53-0407
             </p>
           </div>
 
+
+
           {/* Instagram */}
 
-          <div className="rounded-3xl bg-white/5 p-8 border border-white/10">
+          <div className="rounded-3xl bg-white/5 p-6 md:p-8 border border-white/10">
             <div className="text-4xl">📷</div>
 
-            <h3 className="mt-5 text-2xl font-[var(--font-cormorant)]">
+            <h3 className="mt-4 text-xl md:text-2xl font-[var(--font-cormorant)]">
               Instagram
             </h3>
 
@@ -94,31 +128,39 @@ export default function ContactSection() {
               className="
                 mt-3
                 inline-block
+                text-sm
+                md:text-base
                 text-[#D8C8A8]
-                hover:text-white
                 transition
+                hover:text-white
               "
             >
               @lupinopastas
             </a>
           </div>
 
+
+
           {/* Pedidos */}
 
-          <div className="rounded-3xl bg-white/5 p-8 border border-white/10">
+          <div className="rounded-3xl bg-white/5 p-6 md:p-8 border border-white/10">
             <div className="text-4xl">🍝</div>
 
-            <h3 className="mt-5 text-2xl font-[var(--font-cormorant)]">
+            <h3 className="mt-4 text-xl md:text-2xl font-[var(--font-cormorant)]">
               Pedidos
             </h3>
 
-            <p className="mt-3 text-[#E8DFD2] text-sm leading-7">
+            <p className="
+              mt-3
+              text-sm
+              leading-6
+              text-[#E8DFD2]
+            ">
               Tomamos pedidos
               <br />
               <strong>Lunes a Jueves</strong>
 
-              <br />
-              <br />
+              <br /><br />
 
               Entregas
               <br />
@@ -127,31 +169,37 @@ export default function ContactSection() {
               <br />
 
               9:00 a 13:00 hs
-
               <br />
-              
               16:00 a 20:00 hs
             </p>
           </div>
 
         </div>
 
-        {/* Botón */}
+
+
+        {/* Botón WhatsApp */}
 
         <a
           href="https://wa.me/5492323530407"
           target="_blank"
           rel="noopener noreferrer"
           className="
+            mt-12
+            md:mt-20
             inline-flex
+            w-full
+            sm:w-auto
             items-center
             justify-center
-            mt-20
             rounded-full
             bg-[#7A263A]
-            px-12
-            py-5
-            text-lg
+            px-8
+            py-4
+            md:px-12
+            md:py-5
+            text-base
+            md:text-lg
             font-semibold
             transition-all
             duration-300
@@ -163,7 +211,9 @@ export default function ContactSection() {
           🍝 Hacer mi pedido por WhatsApp
         </a>
 
-        <p className="mt-16 text-sm text-[#B9A88B]">
+
+
+        <p className="mt-12 md:mt-16 text-xs sm:text-sm text-[#B9A88B]">
           © {new Date().getFullYear()} Lupinos · Pastas Artesanales
         </p>
 

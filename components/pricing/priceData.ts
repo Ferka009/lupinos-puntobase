@@ -30,7 +30,7 @@ export const priceData: PriceCategory[] = [
           "Pastas rellenas elaboradas artesanalmente con masa fresca y rellenos cuidadosamente seleccionados.",
         products: [
           {
-            name: "Raviolones de carne desmenuzada al vino tinto",
+            name: "Raviolones de carne braseada al vino tinto",
             price: "$15.000",
           },
           {
@@ -68,7 +68,7 @@ export const priceData: PriceCategory[] = [
 
       {
         name: "Tallarines Artesanales",
-        format: "1 kg | Rinde aproximadamente 7 porciones",
+        format: "1 kg . Rinde aproximadamente 7 porciones",
         description:
           "Masa fresca elaborada artesanalmente para acompañar tus salsas favoritas.",
         price: "$10.500",
@@ -108,8 +108,8 @@ export const priceData: PriceCategory[] = [
     items: [
 
       {
-        name: "Mousse de Chocolate con Frutos Rojos",
-        format: "Porcion Individual",
+        name: "Mousse de chocolate con frutos rojos",
+        format: "Porción Individual",
         description:
           "Chocolate intenso combinado con la frescura de los frutos rojos.",
         price: "$12.000",
@@ -118,9 +118,9 @@ export const priceData: PriceCategory[] = [
 
       {
         name: "Tiramisú",
-        format: "Porcion Individual",
+        format: "Porción Individual",
         description:
-          "El clásico italiano preparado artesanalmente con cafe, mascarpone y cacao.",
+          "El clásico italiano preparado artesanalmente con café, mascarpone y cacao.",
         price: "$8.500",
       },
 

@@ -3,24 +3,34 @@ import { priceData } from "./priceData";
 export default function PriceSection() {
   return (
     <section
-  id="carta"
-  className="
-    scroll-mt-24
-    bg-[#F8F1E5]
-    px-6
-    py-32
-  "
->
+      id="carta"
+      className="
+        scroll-mt-24
+        bg-[#F8F1E5]
+        px-6
+        py-16
+        md:py-32
+      "
+    >
 
       {/* Título */}
 
-      <div className="mx-auto max-w-4xl text-center mb-24">
+      <div
+        className="
+          mx-auto
+          max-w-4xl
+          text-center
+          mb-16
+          md:mb-24
+        "
+      >
 
         <p
           className="
+            text-xs
+            sm:text-sm
             uppercase
-            tracking-[0.55em]
-            text-sm
+            tracking-[0.45em]
             text-[#7A263A]
           "
         >
@@ -30,9 +40,12 @@ export default function PriceSection() {
 
         <h2
           className="
-            mt-5
+            mt-4
             font-[var(--font-cormorant)]
-            text-6xl
+            text-4xl
+            sm:text-5xl
+            md:text-6xl
+            leading-tight
             text-[#2E2E2E]
           "
         >
@@ -43,9 +56,10 @@ export default function PriceSection() {
         <div
           className="
             mx-auto
-            mt-8
+            mt-6
             h-px
-            w-28
+            w-20
+            md:w-28
             bg-[#D8C8A8]
           "
         />
@@ -53,9 +67,11 @@ export default function PriceSection() {
 
         <p
           className="
-            mt-8
-            text-lg
-            leading-8
+            mt-6
+            text-base
+            sm:text-lg
+            leading-7
+            sm:leading-8
             text-gray-600
           "
         >
@@ -69,8 +85,14 @@ export default function PriceSection() {
 
       {/* Carta */}
 
-      <div className="mx-auto max-w-4xl space-y-20">
-
+      <div
+        className="
+          mx-auto
+          max-w-4xl
+          space-y-14
+          md:space-y-20
+        "
+      >
 
         {priceData.map((section) => (
 
@@ -79,10 +101,11 @@ export default function PriceSection() {
 
             <h3
               className="
-                mb-10
+                mb-8
                 text-center
                 font-[var(--font-cormorant)]
-                text-4xl
+                text-3xl
+                sm:text-4xl
                 text-[#7A263A]
               "
             >
@@ -91,7 +114,7 @@ export default function PriceSection() {
 
 
 
-            <div className="space-y-10">
+            <div className="space-y-8">
 
 
               {section.items.map((item) => (
@@ -101,25 +124,27 @@ export default function PriceSection() {
                   className="
                     border-b
                     border-[#D8C8A8]/60
-                    pb-8
+                    pb-6
+                    md:pb-8
                   "
                 >
 
 
-                  {/* Nombre y precio general */}
-
                   <div
                     className="
                       flex
+                      items-start
                       justify-between
-                      gap-5
+                      gap-4
                     "
                   >
 
                     <h4
                       className="
-                        text-2xl
                         font-[var(--font-cormorant)]
+                        text-xl
+                        sm:text-2xl
+                        leading-tight
                         text-[#2E2E2E]
                       "
                     >
@@ -127,14 +152,13 @@ export default function PriceSection() {
                     </h4>
 
 
-                    {/* Solo muestra precio si no tiene variedades */}
-
                     {!item.products && (
                       <span
                         className="
-                          text-lg
-                          text-[#7A263A]
+                          text-base
+                          sm:text-lg
                           font-semibold
+                          text-[#7A263A]
                           whitespace-nowrap
                         "
                       >
@@ -146,12 +170,11 @@ export default function PriceSection() {
 
 
 
-                  {/* Formato */}
-
                   <p
                     className="
                       mt-2
-                      text-sm
+                      text-xs
+                      sm:text-sm
                       uppercase
                       tracking-wider
                       text-[#7A263A]
@@ -162,13 +185,13 @@ export default function PriceSection() {
 
 
 
-                  {/* Descripción */}
-
                   <p
                     className="
-                      mt-4
-                      text-gray-600
+                      mt-3
+                      text-sm
+                      sm:text-base
                       leading-7
+                      text-gray-600
                     "
                   >
                     {item.description}
@@ -176,12 +199,14 @@ export default function PriceSection() {
 
 
 
-                  {/* Productos con precio individual */}
-
                   {item.products && (
 
-                    <div className="mt-6 space-y-4">
-
+                    <div
+                      className="
+                        mt-5
+                        space-y-3
+                      "
+                    >
 
                       {item.products.map((product) => (
 
@@ -189,9 +214,9 @@ export default function PriceSection() {
                           key={product.name}
                           className="
                             flex
-                            justify-between
                             items-center
-                            gap-5
+                            justify-between
+                            gap-4
                             border-b
                             border-[#D8C8A8]/40
                             pb-3
@@ -213,6 +238,8 @@ export default function PriceSection() {
 
                             <span
                               className="
+                                text-sm
+                                sm:text-base
                                 text-[#4A3A32]
                               "
                             >
@@ -225,6 +252,8 @@ export default function PriceSection() {
 
                           <span
                             className="
+                              text-sm
+                              sm:text-base
                               font-semibold
                               text-[#7A263A]
                               whitespace-nowrap
@@ -238,27 +267,21 @@ export default function PriceSection() {
 
                       ))}
 
-
                     </div>
 
                   )}
-
 
                 </div>
 
               ))}
 
-
             </div>
-
 
           </div>
 
         ))}
 
-
       </div>
-
 
     </section>
   );

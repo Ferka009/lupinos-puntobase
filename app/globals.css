@@ -5,23 +5,61 @@
   /* Identidad Lupinos */
 
   --crema: #F8F1E5;
-  --oliva: #5C6B3C;
-  --bordo: #7A263A;
-  --dorado: #C49A4A;
-  --madera: #4A3828;
+  --crema-suave: #F7F2E8;
 
+  --oliva: #5C6B3C;
+
+  --bordo: #7A263A;
+
+  --dorado: #C49A4A;
+  --dorado-suave: #D8C8A8;
+
+  --madera: #4A3828;
+  --carbon: #2E2E2E;
+
+}
+
+
+html {
+  scroll-behavior: smooth;
 }
 
 
 body {
 
   background: var(--crema);
+
   color: var(--madera);
 
+  font-family: var(--font-poppins), sans-serif;
+
 }
-html {
-  scroll-behavior: smooth;
+
+
+/* Selección de texto */
+
+::selection {
+
+  background: var(--bordo);
+
+  color: white;
+
 }
-html{
-  scroll-behavior:smooth;
+
+
+/* Mejor experiencia móvil */
+
+* {
+
+  box-sizing: border-box;
+
+}
+
+
+/* Evita desplazamientos horizontales */
+
+body {
+
+  overflow-x: hidden;
+
 }

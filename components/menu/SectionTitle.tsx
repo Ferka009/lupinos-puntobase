@@ -8,33 +8,55 @@ export default function SectionTitle({
   subtitle,
 }: Props) {
   return (
-    <div className="mb-28 text-center">
+    <div className="mb-16 md:mb-28 text-center px-6">
 
-      <p className="uppercase tracking-[0.55em] text-[#7A263A] text-sm">
+      <p
+        className="
+          text-xs
+          sm:text-sm
+          uppercase
+          tracking-[0.40em]
+          text-[#7A263A]
+        "
+      >
         Lupinos
       </p>
 
       <h2
         className="
-          mt-5
+          mt-4
           font-[var(--font-cormorant)]
-          text-5xl
+          text-4xl
+          sm:text-5xl
           md:text-7xl
+          leading-tight
           text-[#2E2E2E]
         "
       >
         {title}
       </h2>
 
-      <div className="mx-auto mt-6 h-px w-28 bg-[#D8C8A8]" />
+      <div
+        className="
+          mx-auto
+          mt-5
+          h-px
+          w-20
+          sm:w-24
+          md:w-28
+          bg-[#D8C8A8]
+        "
+      />
 
       <p
         className="
           mx-auto
-          mt-8
+          mt-6
           max-w-2xl
-          text-lg
-          leading-8
+          text-base
+          sm:text-lg
+          leading-7
+          sm:leading-8
           text-gray-600
         "
       >
