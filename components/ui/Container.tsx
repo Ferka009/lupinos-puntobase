@@ -1,25 +1,56 @@
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
+import { cn } from "@/utils/cn";
+
 
 interface ContainerProps {
-  children: ReactNode;
-  className?: string;
+
+  children:
+    ReactNode;
+
+  className?:
+    string;
+
 }
 
+
 export default function Container({
+
   children,
-  className = "",
+
+  className,
+
 }: ContainerProps) {
+
+
   return (
+
     <div
-      className={`
-        max-w-7xl
+
+      className={cn(
+
+        `
         mx-auto
-        px-6
-        lg:px-8
-        ${className}
-      `}
+        w-full
+
+        max-w-7xl
+
+        px-[var(--space-md)]
+
+        sm:px-[var(--space-lg)]
+
+        lg:px-[var(--space-xl)]
+        `,
+
+        className
+
+      )}
+
     >
+
       {children}
+
     </div>
+
   );
+
 }

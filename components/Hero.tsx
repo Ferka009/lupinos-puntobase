@@ -1,8 +1,7 @@
 import Image from "next/image";
 
 import Container from "@/components/ui/Container";
-import PrimaryButton from "@/components/ui/PrimaryButton";
-import SecondaryButton from "@/components/ui/SecondaryButton";
+import Button from "@/components/ui/Button";
 
 export default function Hero() {
   const whatsappLink =
@@ -215,22 +214,23 @@ export default function Hero() {
             "
           >
             <div className="w-full sm:w-auto">
-              <PrimaryButton
+              <Button
                 href={whatsappLink}
                 target="_blank"
                 className="w-full sm:w-auto"
               >
                 🍝 Hacé tu pedido
-              </PrimaryButton>
+              </Button>
             </div>
 
             <div className="w-full sm:w-auto">
-              <SecondaryButton
+              <Button
                 href="#especialidades"
+                variant="outline"
                 className="w-full sm:w-auto"
               >
                 Ver productos
-              </SecondaryButton>
+              </Button>
             </div>
           </div>
 

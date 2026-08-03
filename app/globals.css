@@ -1,65 +1,309 @@
 @import "tailwindcss";
 
+
+/* =====================================
+   LUPINOS DESIGN TOKENS
+===================================== */
+
 :root {
 
-  /* Identidad Lupinos */
 
-  --crema: #F8F1E5;
-  --crema-suave: #F7F2E8;
+  /* =====================
+     COLORS
+  ====================== */
 
-  --oliva: #5C6B3C;
+  --lupinos-cream: #F8F1E5;
+  --lupinos-cream-soft: #F7F2E8;
 
-  --bordo: #7A263A;
+  --lupinos-olive: #5C6B3C;
 
-  --dorado: #C49A4A;
-  --dorado-suave: #D8C8A8;
+  --lupinos-bordo: #7A263A;
 
-  --madera: #4A3828;
-  --carbon: #2E2E2E;
+  --lupinos-gold: #C49A4A;
+  --lupinos-gold-soft: #D8C8A8;
+
+  --lupinos-cacao: #4A3828;
+
+  --lupinos-carbon: #2E2E2E;
+
+
+
+  /* =====================
+     TEXT COLORS
+  ====================== */
+
+  --text-primary:
+    var(--lupinos-cacao);
+
+  --text-secondary:
+    #6B6257;
+
+  --text-muted:
+    #8C8175;
+
+
+
+  /* =====================
+     TYPOGRAPHY
+  ====================== */
+
+  --font-display:
+    var(--font-cormorant);
+
+  --font-body:
+    var(--font-poppins);
+
+
+
+  /* =====================
+     SPACING
+  ====================== */
+
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+
+  --space-md: 1rem;
+
+  --space-lg: 1.5rem;
+
+  --space-xl: 2rem;
+
+  --space-2xl: 3rem;
+
+  --space-section:
+    6rem;
+
+
+
+  /* =====================
+     RADIUS
+  ====================== */
+
+  --radius-card:
+    24px;
+
+  --radius-button:
+    14px;
+
+  --radius-small:
+    8px;
+
+
+
+  /* =====================
+     SHADOWS
+  ====================== */
+
+  --shadow-soft:
+    0 10px 30px rgba(74,56,40,0.08);
+
+
+  --shadow-floating:
+    0 20px 50px rgba(74,56,40,0.15);
+
+
+
+  /* =====================
+     MOTION
+  ====================== */
+
+  --motion-fast:
+    150ms;
+
+  --motion-normal:
+    250ms;
+
+  --motion-slow:
+    400ms;
+
 
 }
 
 
-html {
-  scroll-behavior: smooth;
+
+/* =====================================
+   TAILWIND 4 THEME TOKENS
+===================================== */
+
+
+@theme {
+
+
+  /* COLORS */
+
+  --color-lupinos-cream:
+    var(--lupinos-cream);
+
+  --color-lupinos-cream-soft:
+    var(--lupinos-cream-soft);
+
+
+  --color-lupinos-olive:
+    var(--lupinos-olive);
+
+
+  --color-lupinos-bordo:
+    var(--lupinos-bordo);
+
+
+  --color-lupinos-gold:
+    var(--lupinos-gold);
+
+
+  --color-lupinos-gold-soft:
+    var(--lupinos-gold-soft);
+
+
+  --color-lupinos-cacao:
+    var(--lupinos-cacao);
+
+
+  --color-lupinos-carbon:
+    var(--lupinos-carbon);
+
+
+
+  /* TYPOGRAPHY */
+
+  --font-display:
+    var(--font-cormorant);
+
+
+  --font-body:
+    var(--font-poppins);
+
+
 }
 
 
-body {
 
-  background: var(--crema);
+/* =====================================
+   GLOBAL RESET
+===================================== */
 
-  color: var(--madera);
-
-  font-family: var(--font-poppins), sans-serif;
-
-}
-
-
-/* Selección de texto */
-
-::selection {
-
-  background: var(--bordo);
-
-  color: white;
-
-}
-
-
-/* Mejor experiencia móvil */
 
 * {
 
-  box-sizing: border-box;
+  box-sizing:
+    border-box;
 
 }
 
 
-/* Evita desplazamientos horizontales */
+
+html {
+
+  scroll-behavior:
+    smooth;
+
+}
+
+
 
 body {
 
-  overflow-x: hidden;
+  background:
+    var(--lupinos-cream);
+
+
+  color:
+    var(--text-primary);
+
+
+  font-family:
+    var(--font-body);
+
+
+  overflow-x:
+    hidden;
+
+}
+
+
+
+/* =====================================
+   GLOBAL TRANSITIONS
+===================================== */
+
+
+button,
+a {
+
+  transition:
+    all var(--motion-normal) ease;
+
+}
+
+
+
+/* =====================================
+   TYPOGRAPHY
+===================================== */
+
+
+h1,
+h2,
+h3,
+h4 {
+
+
+  font-family:
+    var(--font-display);
+
+
+}
+
+
+
+/* =====================================
+   ACCESSIBILITY
+===================================== */
+
+
+@media (prefers-reduced-motion: reduce) {
+
+
+  *,
+  *::before,
+  *::after {
+
+
+    animation-duration:
+      0.01ms !important;
+
+
+    animation-iteration-count:
+      1 !important;
+
+
+    transition-duration:
+      0.01ms !important;
+
+
+    scroll-behavior:
+      auto !important;
+
+
+  }
+
+}
+
+
+
+/* =====================================
+   TEXT SELECTION
+===================================== */
+
+
+::selection {
+
+
+  background:
+    var(--lupinos-bordo);
+
+
+  color:
+    white;
+
 
 }

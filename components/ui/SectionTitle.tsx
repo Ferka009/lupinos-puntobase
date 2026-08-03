@@ -1,47 +1,165 @@
-import { ReactNode } from "react";
+import { cn } from "@/utils/cn";
+
 
 interface SectionTitleProps {
-  children: ReactNode;
-  subtitle?: string;
-  center?: boolean;
+
+  eyebrow?: string;
+
+  title: string;
+
+  description?: string;
+
+  align?: "center" | "left";
+
+  className?: string;
+
 }
 
+
 export default function SectionTitle({
-  children,
-  subtitle,
-  center = true,
+
+  eyebrow = "Lupinos",
+
+  title,
+
+  description,
+
+  align = "center",
+
+  className,
+
 }: SectionTitleProps) {
+
+
   return (
+
     <div
-      className={`mb-14 ${
-        center ? "text-center" : "text-left"
-      }`}
+
+      className={cn(
+
+        `
+        mb-16
+        md:mb-24
+
+        px-6
+
+        ${
+          align === "center"
+            ? "text-center"
+            : "text-left"
+        }
+        `,
+
+        className
+
+      )}
+
     >
+
+      {
+        eyebrow && (
+
+          <p
+
+            className="
+            text-xs
+            sm:text-sm
+
+            uppercase
+
+            tracking-[0.40em]
+
+            text-lupinos-bordo
+            "
+
+          >
+
+            {eyebrow}
+
+          </p>
+
+        )
+      }
+
+
+
       <h2
+
         className="
-          text-4xl
-          md:text-5xl
-          font-bold
-          text-[#2B2B2B]
-          tracking-tight
+        mt-4
+
+        font-display
+
+        text-4xl
+        sm:text-5xl
+        md:text-7xl
+
+        leading-tight
+
+        text-lupinos-carbon
         "
+
       >
-        {children}
+
+        {title}
+
       </h2>
 
-      {subtitle && (
-        <p
-          className="
-            mt-4
-            text-lg
-            text-neutral-600
-            max-w-2xl
+
+
+      <div
+
+        className="
+        mx-auto
+
+        mt-5
+
+        h-px
+
+        w-20
+        sm:w-24
+        md:w-28
+
+        bg-lupinos-gold-soft
+        "
+
+      />
+
+
+
+      {
+        description && (
+
+          <p
+
+            className="
             mx-auto
-          "
-        >
-          {subtitle}
-        </p>
-      )}
+
+            mt-6
+
+            max-w-2xl
+
+            text-base
+            sm:text-lg
+
+            leading-7
+            sm:leading-8
+
+            text-neutral-600
+            "
+
+          >
+
+            {description}
+
+          </p>
+
+        )
+      }
+
+
     </div>
+
   );
+
 }

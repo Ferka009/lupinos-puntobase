@@ -1,36 +1,14 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { navLinks } from "./navLinks";
+import { navigationLinks } from "@/data/navigation";
+import useNavbarVisibility from "@/hooks/useNavbarVisibility";
 import Logo from "./Logo";
 
 export default function Navbar() {
-  const [isVisible, setIsVisible] = useState(true);
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-
-  useEffect(() => {
-    let lastScroll = window.scrollY;
-
-    const handleScroll = () => {
-      const current = window.scrollY;
-
-      setIsScrolled(current > 20);
-
-      if (current < 100) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(current < lastScroll);
-      }
-
-      lastScroll = current;
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const { isScrolled, isVisible } = useNavbarVisibility();
 
   return (
     <header
@@ -76,7 +54,7 @@ export default function Navbar() {
   {/* Desktop */}
 
   <div className="hidden md:flex items-center gap-10">
-    {navLinks.map((link) => (
+    {navigationLinks.map((link) => (
       <a
         key={link.label}
         href={link.href}
@@ -131,7 +109,7 @@ export default function Navbar() {
         >
           <div className="border-t border-[#d8c8a8]/40 px-6 py-5">
             <div className="flex flex-col gap-5">
-              {navLinks.map((link) => (
+              {navigationLinks.map((link) => (
                 <a
                   key={link.label}
                   href={link.href}

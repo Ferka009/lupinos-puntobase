@@ -6,7 +6,7 @@ import SpecialtiesSection from "@/components/specialties/SpecialtiesSection";
 import MenuSection from "@/components/menu/MenuSection";
 import PriceSection from "@/components/pricing/PriceSection";
 import ContactSection from "@/components/ContactSection";
-import WhatsAppButton from "@/components/ui/WhatsAppButton";
+import WhatsAppButton from "@/components/shared/WhatsAppButton";
 
 export default function Home() {
   return (

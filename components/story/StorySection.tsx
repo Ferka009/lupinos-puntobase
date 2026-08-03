@@ -143,8 +143,8 @@ export default function StorySection() {
               text-[#7a7165]
             "
           >
-            "Así como los lupinos llenan de color los paisajes de la Patagonia,
-            queremos que nuestras pastas llenen de sabor cada mesa."
+            &quot;Así como los lupinos llenan de color los paisajes de la Patagonia,
+            queremos que nuestras pastas llenen de sabor cada mesa.&quot;
           </div>
         </div>
       </div>

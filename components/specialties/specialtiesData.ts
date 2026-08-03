@@ -1,45 +1,13 @@
-export const specialtiesData = [
-  {
-    title: "Raviolones de Carne Braseada al Vino Tinto",
+import { products } from "@/data/products";
 
-    badge: "Producto Insignia",
-
-    subtitle:
-      "Horas de cocción lenta, ingredientes seleccionados y una receta pensada para sorprender.",
-
-    description:
-      "Nuestro raviolón más especial. Elaborado con una masa fresca artesanal que envuelve un relleno de carne braseada cocinada lentamente en vino tinto junto a vegetales, logrando un sabor profundo y una textura increíble.",
-
-    image: "/images/specialties/carne-braseada.jpg",
-
-    tags: [
-      "Artesanal",
-      "Cocción lenta",
-      "Premium",
-    ],
-
-    reverse: false,
-  },
-
-  {
-    title: "Sorrentinos de Trucha",
-
-    badge: "Próximamente",
-
-    subtitle:
-      "Una nueva creación inspirada en los sabores del sur argentino.",
-
-    description:
-      "Muy pronto incorporaremos una nueva especialidad elaborada con trucha seleccionada y una combinación de ingredientes frescos para ofrecer una experiencia delicada y diferente.",
-
-    image: "/images/specialties/trucha.jpg",
-
-    tags: [
-      "Nuevo",
-      "Edición especial",
-      "Muy pronto",
-    ],
-
-    reverse: true,
-  },
-];
+export const specialtiesData = products
+  .filter((product) => product.featured)
+  .map((product, index) => ({
+    title: product.name,
+    badge: product.badges?.[0]?.label ?? "Especialidad Lupinos",
+    subtitle: product.subtitle ?? product.description,
+    description: product.description,
+    image: product.image.src,
+    tags: product.attributes?.map((attribute) => attribute.value) ?? [],
+    reverse: index % 2 !== 0,
+  }));
